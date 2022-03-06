@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    background: #250060;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+h1{
+    position: relative;
+    width: 100%;
+    font-size: 70px;
+    color: #35018a;
+    text-transform: uppercase;
+    text-align: center;
+    -webkit-box-reflect: below -30px linear-gradient(transparent, #00000031);
+}
+h1 span{
+    animation: flashing 3s linear infinite;
+}
+@keyframes flashing{
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%{
+        color: #35018a;
+        text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
+        color: #dfdfdf;
+        text-shadow: 0 0 10px #4b00c4,
+        0 0 20px #4b00c4,
+        0 0 40px #4b00c4,
+        0 0 80px #4b00c4,
+        0 0 160px #4b00c4,
+        0 0 400px #4b00c4;
+    }
+}
+h1 span:nth-child(even){
+    animation-delay: 0.2s;
+}
